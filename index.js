@@ -35,9 +35,10 @@ const checkError = (err, req, res, next) => {
 
 app.post('/register', valid, (req, res) => {
     console.log(req.body)
+    res.send('Hello World')
 });
 
-app.use(checkError)
+// app.use(checkError)
 
 app.listen('8000', () => {
     console.log('Server is running on port 8000')
